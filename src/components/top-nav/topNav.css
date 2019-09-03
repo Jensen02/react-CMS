@@ -1,0 +1,22 @@
+h1 {
+  margin: 0;
+  height: 100%;
+  line-height: 60px;
+}
+.page-head {
+  height: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+.logo {
+  width: 260px;
+  height: 100%;
+  background-color: bisque;
+}
+.user {
+  width: 210px;
+  height: 100%;
+  background-color: chartreuse;
+}
