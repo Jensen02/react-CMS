@@ -6,6 +6,7 @@ import Category from './pages/category-manage/category';
 import Order from './pages/order/order';
 import UserList from './pages/user/userList';
 import Login from './pages/login/Login';
+import OrderDetail from './pages/order_detail/order_detail';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -22,7 +23,8 @@ class App extends React.Component {
                     <Route exact path='/' component={ Home } />
                     <Route path='/product' component={ Product } />
                     <Route path='/category' component={ Category } />
-                    <Route path='/order' component={ Order } />
+                    <Route exact path='/order' component={ Order } />
+                    <Route path='/order/detail/:orderId' component={ OrderDetail } />
                     <Route path='/user-list' component={ UserList } />
                   </Switch>
                 </Layout>

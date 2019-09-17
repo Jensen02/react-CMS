@@ -14,7 +14,6 @@ class UserList extends React.Component {
       userList: [],
       total: 0,
       loading: true,
-      // pageNum: 1
     }
     this.changeData = this.changeData.bind(this)
     this.getUser = this.getUser.bind(this)

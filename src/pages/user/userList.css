@@ -4,3 +4,9 @@
 .pagination {
   margin-top: 30px; 
 }
+table thead {
+  font-weight: bold;
+}
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}

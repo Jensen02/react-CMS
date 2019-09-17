@@ -1,0 +1,9 @@
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.success {
+  color: green;
+}
+.cancel {
+  color: red;
+}
