@@ -4,7 +4,7 @@
  * @Github: https://github.com/Jensen02
  * @Date: 2019-09-17 21:52:55
  * @LastEditors: Jensen
- * @LastEditTime: 2019-09-17 22:03:48
+ * @LastEditTime: 2019-09-19 20:29:23
  */
 
 import * as React from 'react';
@@ -17,9 +17,7 @@ class OrderDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      orderDetail: {
-        id: 122544445657
-      }
+      orderDetail: {}
     }
   }
   componentDidMount() {

@@ -3,6 +3,7 @@ import { Table, Input, Button, Icon, Pagination } from 'antd';
 import Highlighter from 'react-highlight-words';
 import PageTitle from '../../components/page-title/pageTitle';
 import { getUserList } from '../../api/api';
+import { changeData } from '../../utils/util';
 import './userList.css';
 
 class UserList extends React.Component {
@@ -16,7 +17,6 @@ class UserList extends React.Component {
       loading: true,
       // pageNum: 1
     }
-    this.changeData = this.changeData.bind(this)
     this.getUser = this.getUser.bind(this)
   }
   getColumnSearchProps = dataIndex => ({
@@ -78,16 +78,6 @@ class UserList extends React.Component {
     clearFilters();
     this.setState({ searchText: '' });
   };
-  changeData = (dataArr = []) => {
-    dataArr.forEach(item => {
-      Object.defineProperty(item, 'key', {
-        value: item['id']
-      });
-      item['created_time'] = new Date(item['created_time']).toLocaleString()
-      const str = item['phone'];
-      item['phone'] = str.substr(0, 3) + ' ' + str.substr(3, 4) + ' ' + str.substr(7, 4)
-    })
-  }
   onChange = (pageNum) => {
     this.getUser(10, (pageNum - 1) * 10)
   }
@@ -102,7 +92,7 @@ class UserList extends React.Component {
       offset: offset
     }).then(res => {
       const data = res.data.rows;
-      this.changeData(data)
+      changeData(data)
       this.setState({
         userList: data,
         loading: false,
@@ -144,6 +134,7 @@ class UserList extends React.Component {
           loading={ this.state.loading }
           pagination={false}
           columns={columns}
+          className='user-table'
           dataSource={this.state.userList} />
         <Pagination
           className='pagination'

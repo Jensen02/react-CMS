@@ -4,13 +4,14 @@
  * @Github: https://github.com/Jensen02
  * @Date: 2019-09-17 13:07:09
  * @LastEditors: Jensen
- * @LastEditTime: 2019-09-17 22:20:45
+ * @LastEditTime: 2019-09-20 18:13:06
  */
 
 import * as React from 'react';
 import { Table, Button, Pagination, Tag } from 'antd';
 import PageTitle from '../../components/page-title/pageTitle';
 import { getOrderList } from '../../api/api';
+import { changeData } from '../../utils/util';
 import './order.css';
 
 class Order extends React.Component {
@@ -21,17 +22,8 @@ class Order extends React.Component {
       total: 0,
       loading: true,
     }
-    this.changeData = this.changeData.bind(this)
     this.getOrder = this.getOrder.bind(this);
     this.onChange = this.onChange.bind(this);
-  }
-  changeData = (dataArr = []) => {
-    dataArr.forEach(item => {
-      Object.defineProperty(item, 'key', {
-        value: item['id']
-      });
-      item['created_time'] = new Date(item['created_time']).toLocaleString()
-    })
   }
   onChange = (pageNum) => {
     this.getOrder(10, (pageNum - 1) * 10)
@@ -42,7 +34,7 @@ class Order extends React.Component {
   getOrder = (limit, offset) => {
     getOrderList(limit, offset).then(res => {
       let data = res.data.rows;
-      this.changeData(data)
+      changeData(data)
       this.setState({
         total: res.data.count,
         orderList: data,
@@ -96,6 +88,7 @@ class Order extends React.Component {
           loading={ this.state.loading }
           pagination={false}
           columns={columns}
+          className='order-table'
           dataSource={this.state.orderList} />
         <Pagination
           className='pagination'

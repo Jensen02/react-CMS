@@ -5,7 +5,11 @@ h1 {
 }
 .page-head {
   height: 60px;
+  width: 100%;
   min-height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
   display: flex;
   justify-content: space-between;
   background-color: aquamarine;

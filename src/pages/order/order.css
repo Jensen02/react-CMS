@@ -7,3 +7,6 @@ table tr:nth-child(odd) {
 .cancel {
   color: red;
 }
+.order-table {
+  margin-top: 115px; 
+}

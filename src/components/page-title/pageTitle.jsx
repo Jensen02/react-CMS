@@ -12,7 +12,7 @@ class PageTitle extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='page-title'>
         <Row type='flex'>
           <Col span={3}>
             <h1>
