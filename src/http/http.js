@@ -4,11 +4,11 @@
  * @Github: https://github.com/Jensen02
  * @Date: 2019-09-05 18:06:23
  * @LastEditors: Jensen
- * @LastEditTime: 2019-09-11 21:26:59
+ * @LastEditTime: 2019-09-23 20:34:14
  */
 import axios from 'axios';
 import qs from 'qs';
-import $ from 'jquery';
+// import $ from 'jquery';
 // import { message } from 'antd';
 
 // 根据代码环境配置请求的baseUrl 
@@ -61,19 +61,19 @@ export const httpPost = (url, data = {}) => {
   })
 }
 
-export const request = (param) => {
-  return new Promise((resolve, reject) => {
-    $.ajax({
-      type: param.type || 'get',
-      url: 'http://admintest.happymmall.com' + param.url,
-      dataType: param.dataType || 'json',
-      data: param.data,
-      success(res) {
-        resolve(res)
-      },
-      error(error) {
-        reject(error)
-      }
-    })
-  })
-}
+// export const request = (param) => {
+//   return new Promise((resolve, reject) => {
+//     $.ajax({
+//       type: param.type || 'get',
+//       url: 'http://admintest.happymmall.com' + param.url,
+//       dataType: param.dataType || 'json',
+//       data: param.data,
+//       success(res) {
+//         resolve(res)
+//       },
+//       error(error) {
+//         reject(error)
+//       }
+//     })
+//   })
+// }

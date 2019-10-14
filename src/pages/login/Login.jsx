@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Form, Icon, Input, Button, Divider, message } from 'antd';
 // import { login } from '../../api/api';
-import { request } from '../../http/http';
+// import { request } from '../../http/http';
 import './Login.css';
 
 class Login extends React.Component {
@@ -14,19 +14,19 @@ class Login extends React.Component {
         //   res.status === 1 && message.error(res.msg)
         //   console.log(res)
         // })
-        request({
-          type: 'post',
-          url: '/manage/user/login.do',
-          data: {
-            username: values.username,
-            password: values.password
-          }
-        }).then(res => {
-          console.log(res)
-          res.status === 0 && message.success('登录成功!') && this.props.history.replace('/')
-        }).catch(error => {
-          console.log(error)
-        })
+        // request({
+        //   type: 'post',
+        //   url: '/manage/user/login.do',
+        //   data: {
+        //     username: values.username,
+        //     password: values.password
+        //   }
+        // }).then(res => {
+        //   console.log(res)
+        //   res.status === 0 && message.success('登录成功!') && this.props.history.replace('/')
+        // }).catch(error => {
+        //   console.log(error)
+        // })
       }
     });
   };
