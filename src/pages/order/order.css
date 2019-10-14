@@ -1,0 +1,12 @@
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+.success {
+  color: green;
+}
+.cancel {
+  color: red;
+}
+.order-table {
+  margin-top: 115px; 
+}

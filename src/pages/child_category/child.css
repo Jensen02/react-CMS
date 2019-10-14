@@ -1,0 +1,9 @@
+.child {
+  margin-left: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+.child-info {
+  width: 95%;
+  margin: 115px auto;
+}

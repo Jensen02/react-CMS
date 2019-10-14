@@ -1,0 +1,20 @@
+.col-data>div {
+  height: 160px;
+  position: relative;
+  line-height: 160px;
+  opacity: .9;
+  transition: all .5s;
+  cursor: pointer;
+}
+.col-data>div:hover {
+  transform: scale(1.1);
+}
+.brown {
+  background-color: #f0ad4e;
+}
+.green {
+  background-color: #5cb85c;;
+}
+.blue {
+  background-color: #4cb1cf;
+}

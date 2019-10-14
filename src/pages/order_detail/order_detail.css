@@ -1,0 +1,25 @@
+.detail-list {
+  margin-left: 50px;
+}
+.detail-item {
+  width: 730px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+.input {
+  width: 80%;
+  height: 40px;
+  margin-left: 20px;
+  padding: 6px 11px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  text-align: left;
+  line-height: 29px;
+  font-size: 16px;
+}
+h3 {
+  margin: 0;
+  font-weight: bold;
+}

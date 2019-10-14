@@ -1,0 +1,7 @@
+.side-nav {
+    width: 260px;
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    overflow-y: auto;
+}

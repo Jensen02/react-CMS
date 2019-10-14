@@ -1,0 +1,22 @@
+.add {
+  float: right;
+  margin-right: 50px;
+}
+.category {
+  z-index: 1;
+  overflow: hidden;
+}
+.category-info {
+  width: 95%;
+  margin: 115px auto;
+}
+.item {
+  height: 60px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.item2 {
+  position: relative;
+  top: -64px;
+  right: -276px;
+}

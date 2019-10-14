@@ -1,0 +1,16 @@
+.user-list {
+  margin: 0 20px;
+  overflow: hidden;
+}
+.user-table {
+  margin-top: 115px;
+}
+.pagination {
+  margin-top: 30px; 
+}
+table thead {
+  font-weight: bold;
+}
+table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
